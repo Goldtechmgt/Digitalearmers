@@ -99,6 +99,23 @@
         .faq-item.active .faq-answer { max-height: 1000px; padding: 0 20px 20px 20px; }
         .faq-arrow { transform: rotate(0deg); transition: transform 0.2s; font-size: 12px; color: #3b82f6; }
         .faq-item.active .faq-arrow { transform: rotate(180deg);
+
+         /* LEADERBOARD MATRIX LAYOUT */
+        .leaderboard-section { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .leaderboard-container { background: #0f172a; border: 1px solid #1e293b; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .leaderboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 15px; }
+        .leaderboard-header h2 { font-size: 22px; font-weight: 800; color: #fff; }
+        .leaderboard-header span { font-size: 12px; color: #10b981; font-weight: bold; background: rgba(16, 185, 129, 0.1); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2); }
+        .leaderboard-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 15px; border-radius: 12px; margin-bottom: 10px; background: rgba(2, 6, 23, 0.4); border: 1px solid transparent; transition: border-color 0.2s; }
+        .leaderboard-row:hover { border-color: #1e293b; }
+        .user-profile { display: flex; align-items: center; gap: 15px; }
+        .rank-num { font-size: 16px; font-weight: 900; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #1e293b; color: #94a3b8; }
+        .rank-1 { background: #f59e0b; color: #020617; }
+        .rank-2 { background: #cbd5e1; color: #020617; }
+        .rank-3 { background: #b45309; color: #fff; }
+        .user-meta p { font-weight: 700; color: #fff; font-size: 15px; }
+        .user-meta span { font-size: 12px; color: #94a3b8; }
+        .earning-val { font-weight: 800; color: #10b981; font-size: 16px; text-align: right; }    
                                      
         /* OPTION 2: COMPLIANCE LEGAL MODAL STYLES */
         .modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); backdrop-filter:blur(5px); z-index:2000; align-items:center; justify-content:center; padding:20px; }
@@ -209,6 +226,60 @@
             <button class="btn-close" onclick="closeModal()">I Understand</button>
         </div>
     </div>
+    
+    <!-- START TOP EARNERS LEADERBOARD SECTION -->
+<section class="leaderboard-section" style="max-width: 800px; margin: 60px auto; padding: 0 20px;">
+    <h2 class="leaderboard-title" style="text-align: center; font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 8px;">🏆 Weekly Top Earners Leaderboard</h2>
+    <p class="leaderboard-subtitle" style="text-align: center; color: #94a3b8; font-size: 15px; margin-bottom: 30px;">Real-time performance metrics tracking of top network coordinators nationwide.</p>
+    
+    <div class="leaderboard-container" style="background: #0f172a; border: 1px solid #1e293b; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+        <!-- Table Header -->
+        <div class="leader-row header" style="display: flex; background: #1e293b; padding: 15px 20px; font-weight: bold; color: #3b82f6; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">
+            <div style="width: 15%; text-align: center;">Rank</div>
+            <div style="width: 50%;">Username</div>
+            <div style="width: 35%; text-align: right;">Total Earnings</div>
+        </div>
+
+        <!-- Rank 1 -->
+        <div class="leader-row" style="display: flex; items-center; padding: 18px 20px; border-bottom: 1px solid #1e293b; background: rgba(234, 179, 8, 0.03);">
+            <div style="width: 15%; text-align: center; font-size: 20px;">🥇</div>
+            <div style="width: 50%; font-weight: bold; color: #fff; display: flex; align-items: center; gap: 8px;">
+                Ssewankambo_H <span style="background: rgba(234,179,8,0.1); color: #eab308; font-size: 10px; padding: 2px 8px; border-radius: 20px; font-weight: 900;">AGENT</span>
+            </div>
+            <div style="width: 35%; text-align: right; font-weight: 800; color: #10b981; font-size: 16px;">UGX 1,450,000</div>
+        </div>
+
+        <!-- Rank 2 -->
+        <div class="leader-row" style="display: flex; items-center; padding: 18px 20px; border-bottom: 1px solid #1e293b; background: rgba(226, 232, 240, 0.01);">
+            <div style="width: 15%; text-align: center; font-size: 20px;">🥈</div>
+            <div style="width: 50%; font-weight: bold; color: #fff;">Namubiru_M</div>
+            <div style="width: 35%; text-align: right; font-weight: 800; color: #10b981; font-size: 16px;">UGX 980,000</div>
+        </div>
+
+        <!-- Rank 3 -->
+        <div class="leader-row" style="display: flex; items-center; padding: 18px 20px; border-bottom: 1px solid #1e293b; background: rgba(226, 232, 240, 0.01);">
+            <div style="width: 15%; text-align: center; font-size: 20px;">🥉</div>
+            <div style="width: 50%; font-weight: bold; color: #fff;">Auma_Shine</div>
+            <div style="width: 35%; text-align: right; font-weight: 800; color: #10b981; font-size: 16px;">UGX 720,000</div>
+        </div>
+
+        <!-- Rank 4 -->
+        <div class="leader-row" style="display: flex; items-center; padding: 18px 20px; border-bottom: 1px solid #1e293b;">
+            <div style="width: 15%; text-align: center; font-weight: bold; color: #94a3b8;">4</div>
+            <div style="width: 50%; font-weight: bold; color: #cbd5e1;">Kato_Pro</div>
+            <div style="width: 35%; text-align: right; font-weight: 700; color: #10b981;">UGX 540,000</div>
+        </div>
+
+        <!-- Rank 5 -->
+        <div class="leader-row" style="display: flex; items-center; padding: 18px 20px;">
+            <div style="width: 15%; text-align: center; font-weight: bold; color: #94a3b8;">5</div>
+            <div style="width: 50%; font-weight: bold; color: #cbd5e1;">Nsubuga_X</div>
+            <div style="width: 35%; text-align: right; font-weight: 700; color: #10b981;">UGX 415,000</div>
+        </div>
+    </div>
+</section>
+<!-- END TOP EARNERS LEADERBOARD SECTION -->
+
     <!-- START FAQ ACCORDION SECTION -->
 <section class="faq-section" style="max-w: 800px; margin: 60px auto; padding: 0 20px;">
     <h2 class="faq-title" style="text-align: center; font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 30px;">🤔 Frequently Asked Questions</h2>
