@@ -1,1 +1,12 @@
-favisfavicon.svg 
+<svg xmlns="http://w3.org" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Sleek Dark Rounded Background -->
+  <rect width="100" height="100" rx="25" fill="#0f172a"/>
+  
+  <!-- Glowing Abstract Currency Node Pattern -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#3b82f6" stroke-width="4" opacity="0.3"/>
+  <circle cx="50" cy="50" r="22" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="15 5"/>
+  
+  <!-- Central 'D' Letter Logo representing Digital -->
+  <text x="50" y="62" font-family="system-ui, sans-serif" font-weight="900" font-size="36" fill="#ffffff" text-anchor="middle">D</text>
+</svg>
+ 
