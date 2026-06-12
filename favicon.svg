@@ -1,17 +1,37 @@
-<svg xmlns="http://w3.org" viewBox="0 0 100 100">
-  <!-- Rounded Dark Background -->
-  <rect width="100" height="100" rx="20" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
-  
-  <!-- Growth Bars -->
-  <rect x="25" y="60" width="10" height="15" rx="2" fill="#3b82f6"/>
-  <rect x="40" y="45" width="10" height="30" rx="2" fill="#3b82f6"/>
-  <rect x="55" y="30" width="10" height="45" rx="2" fill="#10b981"/>
-  
-  <!-- Upward Arrow -->
-  <path d="M30 50 L55 25 L65 35 M55 25 L45 25" fill="none" stroke="#14b8a6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <polygon points="55,20 62,30 48,30" fill="#14b8a6"/>
-  
-  <!-- Uganda Circle Indicator -->
-  <circle cx="75" cy="70" r="14" fill="#020617" stroke="#10b981" stroke-width="2"/>
-  <text x="75" y="74" font-family="sans-serif" font-weight="900" font-size="11" fill="#fff" text-anchor="middle">DE</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+
+  <!-- Letter DE -->
+  <path d="
+    M140 120
+    H360
+    V170
+    H200
+    V230
+    H330
+    V280
+    H200
+    V342
+    H360
+    V392
+    H140
+    Z
+  " fill="white"/>
+
+  <!-- Qash Coin -->
+  <circle cx="360" cy="360" r="65" fill="#facc15"/>
+  <text x="360" y="382"
+        font-size="70"
+        text-anchor="middle"
+        fill="#14532d"
+        font-family="Poppins, Arial"
+        font-weight="700">DE</text>
+</svg> 
