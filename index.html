@@ -503,27 +503,6 @@
 </section>
 <!-- END INTERACTIVE PAYOUT CALCULATOR SECTION -->
 
-<!-- CALCULATION SCRIPT RUNTIME (Paste inside your master index script block or right below the section) -->
-<script>
-    function calculateReturns() {
-        var chats = parseInt(document.getElementById('chatRange').value);
-        var tasks = parseInt(document.getElementById('taskRange').value);
-        
-        // Update display text counters
-        document.getElementById('chatCount').innerText = chats;
-        document.getElementById('taskCount').innerText = tasks;
-        
-        // Baseline pay metrics logic (e.g., UGX 500 per chat, UGX 500 per task reward factor)
-        var dailyBase = (chats * 500) + (tasks * 500);
-        
-        var weeklyTotal = dailyBase * 7;
-        var monthlyTotal = dailyBase * 30;
-        
-        // Render updated values with comma formatting
-        document.getElementById('weeklyProj').innerText = "UGX " + weeklyTotal.toLocaleString();
-        document.getElementById('monthlyProj').innerText = "UGX " + monthlyTotal.toLocaleString();
-    }
-</script>
 
     <!-- START FAQ ACCORDION SECTION -->
 <section class="faq-section" style="max-w: 800px; margin: 60px auto; padding: 0 20px;">
