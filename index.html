@@ -220,7 +220,40 @@
   color: #999999;
   margin: 10px 0 0 0;
 }
+/* Styling the Link into a Beautiful Button */
+.de-cta-btn {
+  display: block;
+  background: #1d4ed8; /* Matches your exact digital earners blue button color */
+  color: #ffffff !important; /* Forces text to stay clean crisp white */
+  text-decoration: none !important; /* Removes ugly underlines completely */
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin: 15px auto 10px auto;
+  width: 90%; /* Stops the button from stretching completely edge-to-edge */
+  max-width: 280px; /* Perfectly centers and constrains the button on mobile viewports */
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
 
+/* Smooth Interactive Hover Effects */
+.de-cta-btn:hover {
+  background: #2563eb; /* Slightly lighter neon blue on hover/click interaction */
+  transform: translateY(-1px);
+}
+
+/* Clean Subtext Alignment */
+.trust-text {
+  font-size: 11px;
+  color: #a1a1aa; /* Light gray text color to look soft on dark themes */
+  margin: 8px 0 0 0;
+  text-align: center;
+  display: block;
+}
+
+                                  
 
     </style>
 </head>
@@ -299,8 +332,10 @@
   </div>
 
   <!-- Action Button -->
-  <a href="https://mulaprime.com/user/register.php?ref=Wiz25" class="cta-button">Create Your Account Now</a>
-  <p class="trust-text">🔒 Secure official registration link</p>
+  <!-- Secure Action Button -->
+<a href="https://mulaprime.com/user/register.php?ref=Wiz25" class="de-cta-btn">Create Your Account Now</a>
+<p class="trust-text">🔒 Secure official registration link</p>
+
 </div>
 
         </article>
