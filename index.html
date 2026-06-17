@@ -327,23 +327,6 @@
   <span class="badge">🔥 New Guide</span>
   <h2>How to Register with Mulaprime</h2>
   <p class="subtitle">Watch this 35-second video to set up your account correctly and securely.</p>
-  
-  <!-- Video Wrapper -->
-  <div class="video-wrapper">
-    <iframe 
-      src="https://youtube.com/embed/fC9fjYuNAoc" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- Action Button -->
-  <!-- Secure Action Button -->
-<a href="https://mulaprime.com/user/register.php?ref=Wiz25" class="de-cta-btn">Create Your Account Now</a>
-<p class="trust-text">🔒 Secure official registration link</p>
-
-</div>
-
         </article>
 
         <!-- CARD 2: EARNQASH -->
@@ -393,6 +376,11 @@
     💬 Chat Directly on WhatsApp
   </a>
 </div>
+
+        <!-- Clean Video Pop-up Trigger Button -->
+<button class="de-video-trigger-btn" onclick="openVideoModal()">
+  📺 Watch How to Register (35s Video Guide)
+</button>
 
         <!-- CARD 3: FUTURE HUB SPACE PLACEHOLDER -->
         <article class="platform-card" style="opacity: 0.7; border-style: dashed; border-color: #334155;">
@@ -785,10 +773,43 @@
             counterElement.innerText = newNum;
         }
     }
+
+    <script>
+  function openVideoModal() {
+    document.getElementById('videoModal').style.display = 'flex';
+    // Sets the video source only when opened so the site loads instantly
+    document.getElementById('modalIframe').src = "https://youtube.com";
+  }
+
+  function closeVideoModal(event) {
+    // Closes only if background overlay or close button is clicked
+    if (event.target.classList.contains('de-modal-overlay') || event.target.classList.contains('de-modal-close')) {
+      document.getElementById('videoModal').style.display = 'none';
+      document.getElementById('modalIframe').src = ""; // Stops the video audio from playing in background
+    }
+  }
+</script>
+
+    
     // Update the tracker metrics every 3.5 seconds
     setInterval(updateVisitors, 3500);
 </script>
 <!-- END FLOATING LIVE VISITOR COUNTER -->
+    <!-- Hidden Video Modal Structure -->
+<div id="videoModal" class="de-modal-overlay" onclick="closeVideoModal(event)">
+  <div class="de-modal-content">
+    <button class="de-modal-close" onclick="closeVideoModal(event)">&times;</button>
+    <h3>How to Register & Activate</h3>
+    
+    <div class="de-modal-video-frame">
+      <!-- Only loads video when clicked to keep website fast -->
+      <iframe id="modalIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <a href="https://mulaprime.com/user/register.php?ref=Wiz25" class="de-modal-cta">Create Your Account Now</a>
+  </div>
+</div>
+
 
 </body>
 </html>
