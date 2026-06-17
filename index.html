@@ -135,101 +135,90 @@
         .modal-box h2 { color:#fff; margin-bottom:15px; font-size:22px; }
         .modal-box p { color:#94a3b8; font-size:14px; margin-bottom:15px; }
         .btn-close { background:#3b82f6; color:#fff; padding:10px 20px; border-radius:10px; font-weight:bold; border:none; cursor:pointer; float:right; }
+/* Clean Secondary Button */
+.de-video-trigger-btn {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: #a1a1aa;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
 
-/* Card Container Layout */
-.registration-card {
-  max-width: 420px;
-  margin: 40px auto;
-  padding: 24px;
-  background: #ffffff;
+.de-video-trigger-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Fullscreen Background Blur */
+.de-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Central Content Card */
+.de-modal-content {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  width: 100%;
+  max-width: 360px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+  position: relative;
   text-align: center;
-  border: 1px solid #f0f0f0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* Eye-catching Badge */
-.badge {
-  background: #fff0f0;
-  color: #ff3838;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 12px;
+.de-modal-content h3 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 15px 0;
 }
 
-/* Typography */
-.registration-card h2 {
-  font-size: 22px;
-  color: #1a1a1a;
-  margin: 0 0 8px 0;
-  font-weight: 700;
+/* Close Window X Button */
+.de-modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: none; border: none;
+  color: #64748b; font-size: 24px;
+  cursor: pointer;
 }
 
-.subtitle {
-  font-size: 14px;
-  color: #666666;
-  margin: 0 0 20px 0;
-  line-height: 1.4;
-}
-
-/* Perfect 9:16 Video Sizing */
-.video-wrapper {
+/* Perfect Vertical Video Frame */
+.de-modal-video-frame {
   position: relative;
   padding-bottom: 177.78%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  height: 0; overflow: hidden;
+  border-radius: 12px; background: #000;
+  margin-bottom: 15px;
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-} 
+.de-modal-video-frame iframe {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+}
 
-
-/* Styling the Link into a Beautiful Button */
-.de-cta-btn {
+/* Pop-up Button */
+.de-modal-cta {
   display: block;
-  background: #1d4ed8; /* Matches your exact digital earners blue button color */
-  color: #ffffff !important; /* Forces text to stay clean crisp white */
-  text-decoration: none !important; /* Removes ugly underlines completely */
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  margin: 15px auto 10px auto;
-  width: 90%; /* Stops the button from stretching completely edge-to-edge */
-  max-width: 280px; /* Perfectly centers and constrains the button on mobile viewports */
-  transition: background 0.2s ease, transform 0.1s ease;
-  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+  background: #1d4ed8; color: #fff !important;
+  text-decoration: none !important;
+  padding: 12px; border-radius: 8px;
+  font-weight: bold; font-size: 14px;
 }
 
-/* Smooth Interactive Hover Effects */
-.de-cta-btn:hover {
-  background: #2563eb; /* Slightly lighter neon blue on hover/click interaction */
-  transform: translateY(-1px);
-}
-
-/* Clean Subtext Alignment */
-.trust-text {
-  font-size: 11px;
-  color: #a1a1aa; /* Light gray text color to look soft on dark themes */
-  margin: 8px 0 0 0;
-  text-align: center;
-  display: block;
-}
 
   .de-whatsapp-section {
   text-align: center;
@@ -778,14 +767,14 @@
   function openVideoModal() {
     document.getElementById('videoModal').style.display = 'flex';
     // Sets the video source only when opened so the site loads instantly
-    document.getElementById('modalIframe').src = "https://youtube.com";
+    document.getElementById('modalIframe').src = "https://youtube.com/embed/fC9fjYuNAoc";
   }
 
   function closeVideoModal(event) {
     // Closes only if background overlay or close button is clicked
     if (event.target.classList.contains('de-modal-overlay') || event.target.classList.contains('de-modal-close')) {
       document.getElementById('videoModal').style.display = 'none';
-      document.getElementById('modalIframe').src = ""; // Stops the video audio from playing in background
+      document.getElementById('modalIframe').src = "https://youtube.com/embed/fC9fjYuNAoc"; // Stops the video audio from playing in background
     }
   }
 </script>
